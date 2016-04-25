@@ -1,0 +1,13 @@
+﻿@model Receptbok.Models.Recipes
+
+<article class="Recipe">
+    @foreach (var item in Model.FilePath)
+    {
+        <div class="col-md-4 ImageHolder">
+            <img src="/Images/Recipes/@item.FileName" alt="@Model.RecipeName" class="img-responsive">
+        </div>
+    }
+    
+    <h2>@Model.RecipeName</h2>
+    <p>@Model.RecipeInstructions</p>
+</article>
