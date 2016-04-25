@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Receptbok.Models.Categories>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 CategoryColor">
+            <a href="/Kategori/Visa/@item.CategoryId">@item.CategoryName</a>
+        </div>
+    }
+</div>

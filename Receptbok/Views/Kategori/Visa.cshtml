@@ -1,0 +1,28 @@
+﻿@model Receptbok.Models.recept
+
+
+
+<div>
+    <div class="row small-up-1 medium-up-2 large-up-4">
+        <br />
+        <div class="primary">
+            <div class="textalign">
+                <div class="column">
+                    <h1>@Model.receptName</h1>
+                    <br />
+                    <img src="@Model.receptImg" alt="@Model.receptName">
+                    <br />
+                    <div class="ingrinfo">
+                        <p>
+                            @{
+                                HtmlString html_formatted_receptbody = new HtmlString(Model.receptBody);
+                            }
+
+                            @html_formatted_receptbody
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
